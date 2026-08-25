@@ -54,3 +54,21 @@ variable "disk_size" {
   type        = number
   default     = 20
 }
+
+variable "ipv4_address" {
+  description = "IPv4 address"
+  type        = string
+  default     = "dhcp"
+}
+
+variable "username" {
+  description = "User name"
+  type        = string
+  default     = "root"
+}
+
+variable "pub_key_path" {
+  description = "Path to public key"
+  type        = string
+  default     = "~/.ssh/id_ed25519.pub"
+}

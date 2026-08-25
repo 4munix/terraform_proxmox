@@ -42,15 +42,15 @@ resource "proxmox_virtual_environment_vm" "ubuntu" {
   initialization {
     ip_config {
       ipv4 {
-        address = "dhcp"
+        address = var.ipv4_address
       }
     }
 
     user_account {
-      username = "root"
+      username = var.username
 
       keys = [
-        file("~/.ssh/id_ed25519.pub")
+        file(var.pub_key_path)
       ]
     }
   }
