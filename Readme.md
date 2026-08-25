@@ -17,7 +17,7 @@ brew tap hashicorp/tap && \
 
 # Creating the Proxmox user and role for terraform
 
-[https://registry.terraform.io/providers/Terraform-for-Proxmox/proxmox/latest/docs](terraform docs)
+[terraform docs](https://registry.terraform.io/providers/Terraform-for-Proxmox/proxmox/latest/docs)
 
 ## Create role
 
