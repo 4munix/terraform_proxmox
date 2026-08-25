@@ -19,6 +19,8 @@ brew tap hashicorp/tap && \
 
 [https://registry.terraform.io/providers/Terraform-for-Proxmox/proxmox/latest/docs](terraform docs)
 
+## Create role
+
 ```bash
 pveum role add TerraformProv -privs "Datastore.AllocateSpace \
     Datastore.Audit \
@@ -42,6 +44,16 @@ pveum role add TerraformProv -privs "Datastore.AllocateSpace \
     SDN.Use \
     VM.GuestAgent.Audit \
     VM.GuestAgent.Unrestricted"
+```
 
+## Create user with password
+
+```bash
 pveum user add terraform-prov@pve --password <password>
+```
+
+## Add user to role
+
+```bash
 pveum aclmod / -user terraform-prov@pve -role TerraformProv
+```
